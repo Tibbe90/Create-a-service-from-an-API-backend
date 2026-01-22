@@ -16,6 +16,8 @@ public class Pokemon {
     private String name;
     private String trainersNote;
     private int pokeApiId;
+    
+    public Pokemon() {}
 
     public Pokemon(String name, int pokeApiId) {
         this.name = name;
