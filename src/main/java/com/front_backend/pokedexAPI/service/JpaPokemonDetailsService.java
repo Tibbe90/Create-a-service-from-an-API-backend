@@ -15,7 +15,11 @@ public class JpaPokemonDetailsService {
         this.pokemonRepository = pokemonRepository;
     }
 
-    public Iterable<Pokemon> loadPokemonDetails() throws Exception {
+    public Iterable<Pokemon> loadPokemonDetails() {
         return pokemonRepository.findAll();
+    }
+
+    public Pokemon addToPokedex(Pokemon pokemon) {
+        return pokemonRepository.save(pokemon);
     }
 }
