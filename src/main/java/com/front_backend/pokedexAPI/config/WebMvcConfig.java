@@ -13,7 +13,8 @@ public class WebMvcConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/pokedex/**").allowedOrigins("http://localhost:8080");
+                registry.addMapping("/pokedex/**").allowedOrigins("http://localhost:8080")
+                .allowedMethods("GET", "POST", "DELETE");
             }
         };
     }

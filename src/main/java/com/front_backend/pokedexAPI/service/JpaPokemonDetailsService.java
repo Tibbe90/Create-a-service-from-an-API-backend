@@ -1,5 +1,7 @@
 package com.front_backend.pokedexAPI.service;
 
+import java.util.UUID;
+
 import org.springframework.stereotype.Service;
 
 import com.front_backend.pokedexAPI.model.Pokemon;
@@ -21,5 +23,9 @@ public class JpaPokemonDetailsService {
 
     public Pokemon addToPokedex(Pokemon pokemon) {
         return pokemonRepository.save(pokemon);
+    }
+
+    public void deleteFromPokedex(UUID id) {
+       pokemonRepository.deleteById(id);
     }
 }
