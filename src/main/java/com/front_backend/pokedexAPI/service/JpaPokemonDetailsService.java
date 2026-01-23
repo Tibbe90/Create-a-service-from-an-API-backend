@@ -28,6 +28,15 @@ public class JpaPokemonDetailsService {
        pokemonRepository.deleteById(id);
     }
 
+<<<<<<< Updated upstream
+=======
+    public void modifyPokedexEntry(String entry, UUID id) {
+       Pokemon pokemon = pokemonRepository.findById(id)
+       .orElseThrow();
+       pokemonRepository.updateEntry(entry, pokemon.getPokedexId());
+    }
+
+>>>>>>> Stashed changes
     public List<Pokemon> loadPokemonByName() {
         List<Pokemon> sortPokemon = pokemonRepository.findAllList();
         sortPokemon.sort(Comparator.comparing(Pokemon::getName));

@@ -14,5 +14,13 @@ public interface PokemonRepository extends CrudRepository<Pokemon, UUID> {
     //List instead of a Iterable because I wanted to use List.sort in the service java
 @Query ("SELECT p FROM Pokemon p")
 List<Pokemon> findAllList();
+<<<<<<< Updated upstream
     
+=======
+
+@Transactional
+@Modifying
+@Query ("UPDATE Pokemon p SET p.trainersNote = ?1 WHERE p.pokedexId = ?2")
+void updateEntry(String entry, UUID id);
+>>>>>>> Stashed changes
 }

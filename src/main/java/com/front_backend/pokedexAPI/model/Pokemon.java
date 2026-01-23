@@ -16,6 +16,7 @@ public class Pokemon {
     private UUID pokedexId;
     private String name;
     private String trainersNote;
+    
     private int pokeApiId;
     private LocalDateTime catchDate;
     
@@ -31,6 +32,9 @@ public class Pokemon {
     public LocalDateTime getCatchDate() {
         return catchDate;
     }
+    public void setCatchDate(LocalDateTime catchDate) {
+        this.catchDate = catchDate;
+    }
 
     public String getTrainersNote() {
         return trainersNote;
@@ -43,12 +47,24 @@ public class Pokemon {
     public UUID getPokedexId() {
         return pokedexId;
     }
+    public void setPokedexId(UUID pokedexId) {
+        this.pokedexId = pokedexId;
+    }
 
     public String getName() {
         return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getPokeApiId() {
         return pokeApiId;
     }
+    public void setPokeApiId(int pokeApiId) {
+        this.pokeApiId = pokeApiId;
+    }
+
+
+
 }
