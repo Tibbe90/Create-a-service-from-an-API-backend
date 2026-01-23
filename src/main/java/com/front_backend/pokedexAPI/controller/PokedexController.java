@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.front_backend.pokedexAPI.model.Pokemon;
+import com.front_backend.pokedexAPI.model.NoteUpdate;
 import com.front_backend.pokedexAPI.service.JpaPokemonDetailsService;
 
 @RestController
@@ -37,6 +39,17 @@ public class PokedexController {
     public Pokemon addPokemon(@RequestBody Pokemon pokemon) {
         return jpaPokemonDetailsService.addToPokedex(pokemon);
     }
+<<<<<<< Updated upstream
+=======
+/*
+https://www.geeksforgeeks.org/springboot/spring-deletemapping-and-putmapping-annotation/
+ */
+    @PutMapping("/pokedex/{id}")
+    public void updatePokedexNote(@PathVariable UUID id, @RequestBody NoteUpdate noteupdate) {
+        System.out.println("WHAT I GOT" + noteupdate.getNoteUpdate());
+        jpaPokemonDetailsService.modifyPokedexEntry(noteupdate.getNoteUpdate(), id);
+    }
+>>>>>>> Stashed changes
 
     @DeleteMapping("/pokedex/{id}")
     public void deletePokemon(@PathVariable UUID id) {
