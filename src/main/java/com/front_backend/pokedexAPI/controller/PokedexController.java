@@ -46,7 +46,6 @@ public class PokedexController {
      */
     @PutMapping("/pokedex/{id}")
     public void updatePokedexNote(@PathVariable UUID id, @RequestBody NoteUpdate noteupdate) {
-        System.out.println("WHAT I GOT" + noteupdate.getNoteUpdate());
         jpaPokemonDetailsService.modifyPokedexEntry(noteupdate.getNoteUpdate(), id);
     }
 
