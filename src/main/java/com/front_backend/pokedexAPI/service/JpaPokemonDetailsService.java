@@ -12,8 +12,7 @@ import com.front_backend.pokedexAPI.repository.PokemonRepository;
 
 @Service
 public class JpaPokemonDetailsService {
-    
-    
+
     private final PokemonRepository pokemonRepository;
 
     public JpaPokemonDetailsService(PokemonRepository pokemonRepository) {
@@ -25,18 +24,15 @@ public class JpaPokemonDetailsService {
     }
 
     public void deleteFromPokedex(UUID id) {
-       pokemonRepository.deleteById(id);
+        pokemonRepository.deleteById(id);
     }
 
-<<<<<<< Updated upstream
-=======
     public void modifyPokedexEntry(String entry, UUID id) {
-       Pokemon pokemon = pokemonRepository.findById(id)
-       .orElseThrow();
-       pokemonRepository.updateEntry(entry, pokemon.getPokedexId());
+        Pokemon pokemon = pokemonRepository.findById(id)
+                .orElseThrow();
+        pokemonRepository.updateEntry(entry, pokemon.getPokedexId());
     }
 
->>>>>>> Stashed changes
     public List<Pokemon> loadPokemonByName() {
         List<Pokemon> sortPokemon = pokemonRepository.findAllList();
         sortPokemon.sort(Comparator.comparing(Pokemon::getName));

@@ -17,11 +17,11 @@ import com.front_backend.pokedexAPI.service.JpaPokemonDetailsService;
 
 @RestController
 public class PokedexController {
-    
+
     private JpaPokemonDetailsService jpaPokemonDetailsService;
 
     @Autowired
-    public PokedexController(JpaPokemonDetailsService jpaPokemonDetailsService){
+    public PokedexController(JpaPokemonDetailsService jpaPokemonDetailsService) {
         this.jpaPokemonDetailsService = jpaPokemonDetailsService;
     }
 
@@ -39,17 +39,16 @@ public class PokedexController {
     public Pokemon addPokemon(@RequestBody Pokemon pokemon) {
         return jpaPokemonDetailsService.addToPokedex(pokemon);
     }
-<<<<<<< Updated upstream
-=======
-/*
-https://www.geeksforgeeks.org/springboot/spring-deletemapping-and-putmapping-annotation/
- */
+
+    /*
+     * https://www.geeksforgeeks.org/springboot/spring-deletemapping-and-putmapping-
+     * annotation/
+     */
     @PutMapping("/pokedex/{id}")
     public void updatePokedexNote(@PathVariable UUID id, @RequestBody NoteUpdate noteupdate) {
         System.out.println("WHAT I GOT" + noteupdate.getNoteUpdate());
         jpaPokemonDetailsService.modifyPokedexEntry(noteupdate.getNoteUpdate(), id);
     }
->>>>>>> Stashed changes
 
     @DeleteMapping("/pokedex/{id}")
     public void deletePokemon(@PathVariable UUID id) {
