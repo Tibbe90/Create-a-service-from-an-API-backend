@@ -74,10 +74,10 @@ http://localhost:8081
 Pokémon entities are stored in a sql database.  
 UUIDs are used as primary keys.  
 ## Future Ideas for improvements
-Improved error handling
-Login and have each user be able to save a personal pokedex.
-Pagination for large Pokédex datasets.
-Search in pokedex.
+- Improved error handling
+- Login and have each user be able to save a personal pokedex.
+- Pagination for large Pokédex datasets.
+- Search in pokedex.
 
 ## License
 ---
