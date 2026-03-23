@@ -1,5 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/x5rQfWD4)
-
 Cross origin documentation:
 https://spring.io/guides/gs/rest-service-cors
 
@@ -45,7 +43,7 @@ Defines the Pokémon entity and its persistence mapping.
   
 #### Clone the Repository
 
-git clone https://github.com/plugga-tech/skapa-en-tj-nst-utifr-n-ett-api-backend-Tibbe90.git
+git clone git@github.com:Tibbe90/Create-a-service-from-an-API-backend.git
 This will compile the project.
 ## Configuration
 ###### Application Properties
